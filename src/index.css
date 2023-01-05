@@ -1,13 +1,307 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0%;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  padding: 10px 15px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(0, 140, 255);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(0, 81, 255);
+}
+
+/* main */
+/* introduction part CSS */
+#introduction {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin: 2% 10%;
+}
+
+#introduction div {
+  display: flex;
+}
+
+#introduction h1 {
+  font-family: "Comforter Brush", cursive;
+  color: #00b39b;
+  font-size: 2.125rem;
+  margin: 2%;
+}
+
+#introduction div p {
+  font-weight: 400;
+  color: gray;
+  line-height: 1.5;
+  padding: 2%;
+}
+
+section .table {
+  display: flex;
+  justify-content: center;
+}
+
+section .table :nth-child(1) {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: rgb(123, 241, 226);
+
+  width: 150px;
+  height: 100px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+section .table :nth-child(2) {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: rgb(79, 122, 187);
+
+  width: 150px;
+  height: 100px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+section .table :nth-child(3) {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: rgb(32, 37, 44);
+
+  width: 150px;
+  height: 100px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+section .table :hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  #introduction div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #introduction div p {
+    width: 300px;
+  }
+}
+
+/* ------------------------------------------- */
+/* countriues part CSS */
+#countries {
+  /* 1step : postions and alignements: using flexBox */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* step 2: box model */
+  margin: 2% 10%;
+}
+
+.country {
+  margin-bottom: 2%;
+  border-radius: 2%;
+}
+
+.country img {
+  width: 300px;
+  height: 450px;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+
+.country div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.country div {
+  padding: 4%;
+}
+
+.country div p {
+  color: gray;
+}
+
+.country div button {
+  color: white;
+  background-color: rgb(0, 153, 255);
+  padding: 2%;
+}
+
+.country:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+#nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.about {
+  color: aqua;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+@media (max-width: 500px) {
+  #nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+#sponsor {
+  color: rgb(140, 240, 231);
+  display: flex;
+
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#sponsor img {
+  gap: 20px;
+}
+
+#third {
+  background-color: rgb(202, 248, 248);
+  background-image: url(https://www.docplanner.com/img/logo.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  display: block;
+  height: 500px;
+  position: relative;
+}
+
+#third .flag {
+  position: absolute;
+  right: 30%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  width: 150px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+}
+
+#third .flag h3 {
+  color: rgb(61, 233, 176);
+}
+
+#third .visits {
+  position: absolute;
+  right: 10%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  width: 150px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+}
+
+#third .visits h3 {
+  color: rgb(61, 233, 176);
+}
+
+#third .doctors {
+  position: absolute;
+  bottom: 0%;
+  right: 30%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  width: 150px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+}
+
+#third .doctors h3 {
+  color: rgb(61, 233, 176);
+}
+
+#third .patients {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  width: 150px;
+  border: 10px white;
+  padding: 30px;
+  margin: 10px;
+}
+
+#third .patients h3 {
+  color: rgb(61, 233, 176);
+}
+
+#improve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#improve h3 {
+  color: rgb(0, 255, 200);
+}
+
+#join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 100px;
+}
+
+/*footer*/
+footer p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer p samp {
+  color: aqua;
 }
